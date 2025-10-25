@@ -1,0 +1,22 @@
+{
+    "sourceFile": "main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1761384460564,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1761384494301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,17 @@\n-const productImg = document.getElementById('productImg');\r\n-let isImage1 = true; // to keep track of which image is shown\r\n+const img1 = document.querySelector('.image1');\r\n+const img2 = document.querySelector('.image2');\r\n \r\n-productImg.addEventListener('click', () => {\r\n-  if (isImage1) {\r\n-    productImg.src = 'image2.png'; // replace with your second image path\r\n-  } else {\r\n-    productImg.src = 'image1.png'; // replace with your first image path\r\n-  }\r\n-  isImage1 = !isImage1; // toggle the state\r\n+// Start with only image1 visible\r\n+img1.style.display = 'block';\r\n+img2.style.display = 'none';\r\n+\r\n+// Toggle on click\r\n+img1.addEventListener('click', () => {\r\n+  img1.style.display = 'none';\r\n+  img2.style.display = 'block';\r\n });\r\n+\r\n+img2.addEventListener('click', () => {\r\n+  img2.style.display = 'none';\r\n+  img1.style.display = 'block';\r\n+});\r\n"
+                }
+            ],
+            "date": 1761384460564,
+            "name": "Commit-0",
+            "content": "const productImg = document.getElementById('productImg');\r\nlet isImage1 = true; // to keep track of which image is shown\r\n\r\nproductImg.addEventListener('click', () => {\r\n  if (isImage1) {\r\n    productImg.src = 'image2.png'; // replace with your second image path\r\n  } else {\r\n    productImg.src = 'image1.png'; // replace with your first image path\r\n  }\r\n  isImage1 = !isImage1; // toggle the state\r\n});\r\n"
+        }
+    ]
+}
